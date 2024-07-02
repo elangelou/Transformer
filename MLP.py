@@ -3,8 +3,8 @@ import torch.nn as nn
 import einops
 from fancy_einsum import einsum
 from torch import Tensor
-from easy_transformer import EasyTransformer
-from easy_transformer.utils import gelu_new
+from transformer_lens import EasyTransformer
+from transformer_lens.utils import gelu_new
 import LayerNorm as LayerNorm
 
 class MLP(nn.Module):
@@ -24,6 +24,3 @@ class MLP(nn.Module):
         post = gelu_new(pre)
         mlp_out = einsum("batch position d_mlp, d_mlp d_model -> batch position d_model", post, self.W_out) + self.b_out 
         return mlp_out
-
-
-        
