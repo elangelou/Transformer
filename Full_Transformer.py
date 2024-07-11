@@ -1,5 +1,6 @@
 import torch as t
 import torch.nn as nn
+import torch.nn.functional as F
 import math
 import einops
 from fancy_einsum import einsum
@@ -41,6 +42,15 @@ class DemoTransformer(nn.Module):
         
         return logits
     
+def lm_cross_entropy_loss(logits, tokens):
+    assert logits.dim() == 3 and tokens.dim() == 2
+    batch_size, seq_len, d_vocab = logits.shape
+
+    shift_logits = logits[:, :-1].contiguous().view(-1, d_vocab)
+    shift_tokens = tokens[:, 1:].contiguous().view(-1)
+
+    loss = F.cross_entropy(shift_logits, shift_tokens)
+    return loss
 transformer = DemoTransformer(cfg)
 
 demo_gpt2 = DemoTransformer(Config(debug=False)).to(device)
@@ -65,8 +75,6 @@ for i in tqdm(range(100)):
 
     demo_logits = demo_gpt2(test_tokens)
     test_string += reference_gpt2.tokenizer.decode(demo_logits[-1, -1].argmax())
-
-print(test_string)
 
 demo_gpt2 = DemoTransformer(Config(debug=False))
 demo_gpt2.load_state_dict(reference_gpt2.state_dict(), strict=False)

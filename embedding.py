@@ -31,10 +31,7 @@ class Embed(t.nn.Module):
         one_hot = t.zeros(batch_size, seq_len, vocab_size, device=tokens.device)
         one_hot.scatter_(2, tokens.unsqueeze(-1), 1)
 
-        print("tokens shape before einsum:", one_hot.shape)
-        print("self.W_E shape:", self.W_E.shape)
-
-        output = t.einsum("bsv, ve->bse", one_hot, self.W_E)
+        output = t.einsum("bsv, ve->bse", one_hot, self.W_E.to(one_hot.device))
 
         print("output shape after einsum:", output.shape)
         return output
