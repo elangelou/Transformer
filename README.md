@@ -1,9 +1,8 @@
 # Transformer
 [![Python](https://img.shields.io/badge/Python-3.7%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-This project contains an implementation of a Transformer model (GPT-2) from scratch.
+Implementing a Transformer model (GPT-2) from scratch.
 
 ## Structure
 
@@ -67,4 +66,4 @@ Use `training.py` or `training.ipynb` to train your transformer model. The `tran
 
 ## Acknowledgements
 
-This project was based on instructions found in the ARENA curriculum: https://arena3-chapter1-transformer-interp.streamlit.app/[1.1]_Transformer_from_Scratch
+This implementation is based on instructions found in the ARENA curriculum: https://arena3-chapter1-transformer-interp.streamlit.app/[1.1]_Transformer_from_Scratch
