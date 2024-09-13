@@ -68,4 +68,4 @@ Use `training.py` or `training.ipynb` to train your transformer model. The `tran
 
 ## Acknowledgements
 
-(https://arena3-chapter1-transformer-interp.streamlit.app/[1.1]_Transformer_from_Scratch)
+This project was based on instructions found in the ARENA curriculum: https://arena3-chapter1-transformer-interp.streamlit.app/[1.1]_Transformer_from_Scratch
