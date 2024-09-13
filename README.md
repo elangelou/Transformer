@@ -4,22 +4,16 @@
 
 Implementing a Transformer model (GPT-2) from scratch.
 
-## Structure
+## Layers
 
-- `attention.py` & `attention.ipynb`: Attention mechanism implementation
-- `embedding.py` & `embedding.ipynb`: Embedding layer implementation
-- `Full_Transformer.py` & `Full_Transformer.ipynb`: Complete transformer model
-- `LayerNorm.py` & `LayerNorm.ipynb`: Layer normalization implementation
-- `MLP.py` & `MLP.ipynb`: Multi-layer perceptron implementation
-- `param+activ.py` & `param+activ.ipynb`: Parameter and activation functions
-- `positionalembeding.py` & `positionalembeding.ipynb`: Positional embedding implementation
-- `setup_arena.py` & `setup_arena.ipynb`: Setup for training environment
-- `training.py` & `training.ipynb`: Training routines
-- `transformer_arena.py` & `transformer_arena.ipynb`: Transformer testing environment
-- `TransformerBlock.py` & `TransformerBlock.ipynb`: Individual transformer block implementation
-- `Unembedding.py` & `Unembedding.ipynb`: Unembedding layer implementation
-- `setup.py`: Project setup script
-- `LICENSE`: License information for the project
+- **Attention**: Core attention mechanism
+- **Embedding**: Input embedding layer
+- **Full Transformer**: Complete transformer architecture
+- **Layer Normalization**: Normalization technique
+- **MLP**: Feed-forward network component
+- **Positional Embedding**: Position information encoding
+- **Transformer Block**: Individual transformer layer
+- **Unembedding**: Output layer for token prediction
 
 ## Setup
 
@@ -48,17 +42,6 @@ To run a Jupyter notebook:
 jupyter notebook
 ```
 Then navigate to the desired `.ipynb` file.
-
-## Layers
-
-- **Attention**: Core attention mechanism
-- **Embedding**: Input embedding layer
-- **Full Transformer**: Complete transformer architecture
-- **Layer Normalization**: Normalization technique
-- **MLP**: Feed-forward network component
-- **Positional Embedding**: Position information encoding
-- **Transformer Block**: Individual transformer layer
-- **Unembedding**: Output layer for token prediction
 
 ## Training
 
