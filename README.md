@@ -1,12 +1,8 @@
 # Transformer
 
-# Transformer
+This project contains an implementation of a Transformer model (GPT-2) from scratch.
 
-# Transformer Implementation
-
-This project contains an implementation of a Transformer model (GPT-2), including various components and utilities for building and training transformer-based architectures.
-
-## Project Structure
+## Structure
 
 - `attention.py` & `attention.ipynb`: Attention mechanism implementation
 - `embedding.py` & `embedding.ipynb`: Embedding layer implementation
@@ -51,7 +47,7 @@ jupyter notebook
 ```
 Then navigate to the desired `.ipynb` file.
 
-## Components
+## Layers
 
 - **Attention**: Core attention mechanism
 - **Embedding**: Input embedding layer
@@ -62,7 +58,7 @@ Then navigate to the desired `.ipynb` file.
 - **Transformer Block**: Individual transformer layer
 - **Unembedding**: Output layer for token prediction
 
-## Training and Evaluation
+## Training
 
 Use `training.py` or `training.ipynb` to train your transformer model. The `transformer_arena.py` and `transformer_arena.ipynb` files provide an environment for testing and evaluating your implementation.
 
